@@ -304,12 +304,17 @@ public class DecorateDelegate extends BottomItemDelegate implements View.OnClick
     @Override
     public void onDestroy() {
         super.onDestroy();
+
         //删除缓存图片
-        File file = new File(img_1_path);
-        if (file.exists())
-            file.delete();
-        file = new File(img_2_path);
-        if (file.exists())
-            file.delete();
+        if(img_1_path!=null&&(!img_1_path.isEmpty())){
+            File file = new File(img_1_path);
+            if (file.exists())
+                file.delete();
+        }
+        if(img_2_path!=null&&(!img_2_path.isEmpty())){
+            File file = new File(img_2_path);
+            if (file.exists())
+                file.delete();
+        }
     }
 }

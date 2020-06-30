@@ -97,7 +97,6 @@ public class ExampleCreateDelegate extends QiluDelegate implements View.OnClickL
                         .setPositiveButton("确定", null)
                         .show();
             }
-            Toast.makeText(getContext(), "假装上传", Toast.LENGTH_SHORT).show();
         }
         else if (v.getId() == R.id.only_img) {
             AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getContext()));
