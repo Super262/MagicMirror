@@ -19,6 +19,7 @@ import com.qilu.core.delegates.PermissionCheckerDelegate;
 import com.qilu.core.util.file.FileUtil;
 
 import java.io.File;
+import java.util.Objects;
 
 //照片处理类
 public class CameraHandler implements View.OnClickListener {
@@ -27,7 +28,7 @@ public class CameraHandler implements View.OnClickListener {
 
     public CameraHandler(PermissionCheckerDelegate delegate) {
         this.DELEGATE = delegate;
-        DIALOG = new AlertDialog.Builder(delegate.getContext()).create();
+        DIALOG = new AlertDialog.Builder(Objects.requireNonNull(delegate.getContext())).create();
     }
     final void beginCameraDialog(){
         DIALOG.show();
@@ -63,7 +64,7 @@ public class CameraHandler implements View.OnClickListener {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             final ContentValues contentValues = new ContentValues(1);
             contentValues.put(MediaStore.Images.Media.DATA, tempFile.getPath());
-            final Uri uri = DELEGATE.getContext().getContentResolver().
+            final Uri uri = Objects.requireNonNull(DELEGATE.getContext()).getContentResolver().
                     insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
             //需要将Uri路径转化为实际路径
             final File realFile =

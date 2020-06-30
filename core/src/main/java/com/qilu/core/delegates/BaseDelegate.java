@@ -100,7 +100,7 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         DELEGATE.onSaveInstanceState(outState);
     }
@@ -214,11 +214,4 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
         DELEGATE.putNewBundle(newBundle);
     }
 
-    public void start(ISupportFragment toFragment) {
-        DELEGATE.start(toFragment);
-    }
-
-    public void start(final ISupportFragment toFragment, @LaunchMode int launchMode) {
-        DELEGATE.start(toFragment, launchMode);
-    }
 }

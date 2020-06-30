@@ -1,7 +1,6 @@
 package com.qilu.core.delegates;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 import com.qilu.core.ui.camera.CameraImageBean;
 import com.qilu.core.ui.camera.QiluCamera;
 import com.qilu.core.ui.camera.RequestCodes;
-//import com.qilu.core.ui.scanner.ScannerDelegate;
 import com.qilu.core.util.callback.CallbackManager;
 import com.qilu.core.util.callback.CallbackType;
 import com.qilu.core.util.callback.IGlobalCallback;
@@ -47,16 +45,6 @@ public abstract class PermissionCheckerDelegate extends BaseDelegate {
         PermissionCheckerDelegatePermissionsDispatcher.startCameraWithPermissionCheck(this);
     }
 
-    //扫描二维码(不直接调用)
-    @NeedsPermission(Manifest.permission.CAMERA)
-    void startScan(BaseDelegate delegate) {
-//        delegate.getSupportDelegate().startForResult(new ScannerDelegate(), RequestCodes.SCAN);
-    }
-
-    public void startScanWithCheck(BaseDelegate delegate) {
-        PermissionCheckerDelegatePermissionsDispatcher.startScanWithPermissionCheck(this, delegate);
-    }
-
     @OnPermissionDenied(Manifest.permission.CAMERA)
     void onCameraDenied() {
         Toast.makeText(getContext(), "不允许拍照", Toast.LENGTH_LONG).show();
@@ -75,18 +63,8 @@ public abstract class PermissionCheckerDelegate extends BaseDelegate {
     private void showRationaleDialog(final PermissionRequest request) {
         if (getContext() != null) {
             new AlertDialog.Builder(getContext())
-                    .setPositiveButton("同意使用", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            request.proceed();
-                        }
-                    })
-                    .setNegativeButton("拒绝使用", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            request.cancel();
-                        }
-                    })
+                    .setPositiveButton("同意使用", (dialog, which) -> request.proceed())
+                    .setNegativeButton("拒绝使用", (dialog, which) -> request.cancel())
                     .setCancelable(false)
                     .setMessage("权限管理")
                     .show();

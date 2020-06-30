@@ -57,12 +57,7 @@ public class RequestCallbacks implements Callback<String> {
     private void onRequestFinish() {
         final long delayed = Qilu.getConfiguration(ConfigKeys.LOADER_DELAYED);
         if (LOADER_STYLE != null) {
-            HANDLER.postDelayed(new Runnable() {
-             @Override
-                public void run() {
-                    QiluLoader.stopLoading();
-                }
-            }, delayed);
+            HANDLER.postDelayed(QiluLoader::stopLoading, delayed);
         }
     }
 }

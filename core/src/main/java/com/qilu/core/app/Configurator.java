@@ -9,14 +9,11 @@ import com.joanzapata.iconify.Iconify;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import okhttp3.Interceptor;
-
 public class Configurator {
 
     private static final HashMap<Object,Object> QILU_CONFIGS= new HashMap<>();
     private static final Handler HANDLER = new Handler();
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
-    private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
 
     private Configurator(){
         QILU_CONFIGS.put(ConfigKeys.CONFIG_READY, false);
@@ -60,11 +57,6 @@ public class Configurator {
     }
     public final Configurator withLoaderDelayed(long delayed) {
         QILU_CONFIGS.put(ConfigKeys.LOADER_DELAYED, delayed);
-        return this;
-    }
-    public final Configurator withInterceptor(Interceptor interceptor) {
-        INTERCEPTORS.add(interceptor);
-        QILU_CONFIGS.put(ConfigKeys.INTERCEPTOR, INTERCEPTORS);
         return this;
     }
 
