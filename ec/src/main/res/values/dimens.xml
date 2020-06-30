@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin">8dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="button_size">15dp</dimen>
+
+    <dimen name="button_width">60dp</dimen>
+    <dimen name="button_height">30dp</dimen>
+
+    <dimen name="button_width2">75dp</dimen>
+    <dimen name="button_height2">45dp</dimen>
+
+    <dimen name="separator">15dp</dimen>
+
+    <!--    几种字体图标宽度-->
+    <dimen name="opIconLength">17dp</dimen>
+    <dimen name="opIconLength2">20dp</dimen>
+    <dimen name="opIconLength3">25dp</dimen>
+
+    <!--    几种字体图标字号-->
+    <dimen name="opIconTextSize">17sp</dimen>
+    <dimen name="opIconTextSize2">20sp</dimen>
+    <dimen name="opIconTextSize3">25sp</dimen>
+
+    <!--    几种字号-->
+    <dimen name="opTextSize">15sp</dimen>
+    <dimen name="opTextSize2">17sp</dimen>
+    <dimen name="opTextSize3">20sp</dimen>
+
+    <dimen name="textLength">35dp</dimen>
+    <dimen name="textSep">5dp</dimen>
+    <dimen name="textSep2">10dp</dimen>
+    <dimen name="imageLength">40dp</dimen>
+</resources>

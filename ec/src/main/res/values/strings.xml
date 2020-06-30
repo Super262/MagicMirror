@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">试妆魔镜EC</string>
+    <string name="about_app">  张峰玮开发  </string>
+
+    <string name="starToPlus">{fa-heart-o}收藏</string>
+    <string name="starPlused">{fa-heart}已收藏</string>
+    <string name="download">{fa-download}下载</string>
+
+    <string name="honor">头衔</string>
+    <string name="name">名字</string>
+    <string name="focus">＋关注</string>
+    <string name="distribution">转发</string>
+    <string name="comment">评论</string>
+    <string name="like">点赞</string>
+    <string name="time">时间Test</string>
+    <string name="publish">发表</string>
+    <string name="changeUserName">更改用户名</string>
+    <string name="changePassWord">更改密码</string>
+    <string name="changeHonor">更改头衔</string>
+    <string name="about">关于</string>
+</resources>

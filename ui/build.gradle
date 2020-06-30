@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':core')
+
+    //RecyclerView依赖
+    //noinspection GradleDependency
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+
+    //RecyclerView 分割线
+    api 'com.choices.divider:RecyclerView_Divider:1.0.0'
+
+    //Banner依赖
+    //noinspection GradleDependency
+    api 'com.bigkoo:convenientbanner:2.0.5'
+    //noinspection GradleDependency
+    api 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
+    //auto
+    //noinspection GradleDependency
+    api "com.google.auto.value:auto-value-annotations:1.6"
+    //noinspection GradleDependency
+    annotationProcessor "com.google.auto.value:auto-value:1.6"
+
+    //View动画依赖
+    api 'com.nineoldandroids:library:2.4.0'
+    api 'com.daimajia.easing:library:2.1@aar'
+    api 'com.daimajia.androidanimations:library:2.3@aar'
+}
+

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/top_3"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:alignItems="center"
+            app:justifyContent="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上妆"
+                android:textColor="@color/black"
+                android:textSize="@dimen/opTextSize3" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:scrollbars="none">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="@dimen/separator"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="示例照片"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opTextSize2" />
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/button_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/separator"
+                            android:gravity="center"
+                            android:text="{fa-plus-circle}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opIconTextSize3" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/separator" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="@dimen/separator"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="用户照片"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opTextSize2" />
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/button_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/separator"
+                            android:gravity="center"
+                            android:text="{fa-plus-circle}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opIconTextSize3" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:id="@+id/img_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/separator" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/resultLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/separator"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="结果图"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/opTextSize2" />
+
+                    <com.joanzapata.iconify.widget.IconTextView
+                        android:id="@+id/result_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/layout_margin"
+                        android:gravity="center"
+                        android:text="{fa-download}"
+                        android:textColor="@color/peter_river"
+                        android:textSize="@dimen/opTextSize3" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <ImageView
+                    android:id="@+id/img_result"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/separator" />
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textLength"
+                android:layout_margin="@dimen/separator"
+                app:alignItems="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="淡"
+                    android:textSize="@dimen/opTextSize" />
+
+                <hearsilent.discreteslider.DiscreteSlider
+                    android:id="@+id/value"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:ds_count="100"
+                    app:ds_inactiveTrackColor="@color/light_gray"
+                    app:ds_mode="normal"
+                    app:ds_thumbColor="@color/colorECampus"
+                    app:ds_thumbPressedColor="#87CEFA"
+                    app:ds_thumbRadius="6dp"
+                    app:ds_tickMarkColor="#3DFFFFFF"
+                    app:ds_tickMarkDashLength="1dp"
+                    app:ds_tickMarkInactiveColor="@color/white"
+                    app:ds_tickMarkStep="1"
+                    app:ds_trackColor="@color/colorECampus"
+                    app:ds_trackWidth="5dp"
+                    app:ds_valueLabelMode="none"
+                    app:layout_flexGrow="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="浓"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/opTextSize" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/separator"
+                android:layout_marginRight="@dimen/separator"
+                app:alignItems="center"
+                app:justifyContent="space_between">
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/separator"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全局化妆"
+                    android:textSize="@dimen/opTextSize" />
+
+                <RadioButton
+                    android:id="@+id/radio_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="局部化妆"
+                    android:textSize="@dimen/opTextSize" />
+            </RadioGroup>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="眼影"
+                    android:textSize="@dimen/opTextSize" />
+
+                <CheckBox
+                    android:id="@+id/check_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="嘴唇"
+                    android:textSize="@dimen/opTextSize" />
+
+                <CheckBox
+                    android:id="@+id/check_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="面部"
+                    android:textSize="@dimen/opTextSize" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:text="应用"
+                    android:textSize="@dimen/opTextSize" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </ScrollView>
+</android.support.v7.widget.LinearLayoutCompat>

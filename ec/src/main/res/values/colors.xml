@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorECampus">#2898f5</color>
+    <color name="app_background">#1111</color>
+    <color name="item_background">#F1F1F1</color>
+    <color name="state_need_accept">#EE1289</color>
+    <color name="state_need_assess">#12a1ee</color>
+    <color name="state_finish">#06c46f</color>
+
+
+    <color name="separator">#808080</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="orange">#e97a02</color>
+    <color name="gray">#d1d1d1</color>
+    <color name="light_gray">#DCDCDC</color>
+
+    <color name="cloud">#ECF0F1</color>
+    <color name="green_sea">#00B5A0</color>
+    <color name="peter_river">#0097D5</color>
+    <color name="concrete">#92A6A6</color>
+    <color name="azure">#f0ffff</color><!--天蓝色 -->
+    <color name="lightblue">#add8e6</color><!--亮蓝色 -->
+    <color name="lightslategray">#778899</color><!--亮蓝灰 -->
+</resources>

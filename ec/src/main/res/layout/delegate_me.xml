@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/top_4"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:alignItems="center"
+            app:justifyContent="space_between">
+
+            <ImageView
+                android:layout_width="@dimen/imageLength"
+                android:layout_height="@dimen/imageLength" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/imageLength"
+                android:gravity="center"
+                android:text="我"
+                android:textColor="@color/black"
+                android:textSize="@dimen/opTextSize3" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/option"
+                android:layout_width="@dimen/imageLength"
+                android:layout_height="@dimen/imageLength"
+                android:gravity="center_vertical"
+                android:text="{fa-cog}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/opTextSize3" />
+        </com.google.android.flexbox.FlexboxLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        app:cardElevation="5dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/layout_margin"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/user_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/user_example" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/separator"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="name1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/opTextSize2" />
+
+                    <!--<TextView
+                        android:id="@+id/text_honor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="name2"
+                        android:textColor="@color/lightblue"
+                        android:textSize="@dimen/opTextSize" />-->
+                </android.support.v7.widget.LinearLayoutCompat>
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        app:cardElevation="5dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:padding="@dimen/layout_margin">
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/user_info"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="{fa-child}"
+                    android:textSize="@dimen/opTextSize3" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/separator"
+                    app:alignItems="center"
+                    app:justifyContent="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人中心"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/opTextSize2" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/star"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/layout_margin"
+                        android:paddingBottom="@dimen/layout_margin">
+
+                        <TextView
+                            android:id="@+id/center_bar_text_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_bar_image_1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="示例收藏"
+                            android:textColor="#666666"
+                            android:textSize="14sp" />
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/center_bar_image_1"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="{fa-bookmark}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opTextSize2" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/history"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/layout_margin"
+                        android:paddingBottom="@dimen/layout_margin">
+
+                        <TextView
+                            android:id="@+id/center_bar_text_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_bar_image_2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="美妆历史"
+                            android:textColor="#666666"
+                            android:textSize="14sp" />
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/center_bar_image_2"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="{fa-history}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opTextSize2" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/upload"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/layout_margin"
+                        android:paddingBottom="@dimen/layout_margin">
+
+                        <TextView
+                            android:id="@+id/center_bar_text_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_bar_image_3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="上传示例"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/opTextSize" />
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/center_bar_image_3"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="{fa-cloud-upload}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/opTextSize2" />
+                    </RelativeLayout>
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.CardView>
+</android.support.v7.widget.LinearLayoutCompat>
