@@ -275,6 +275,29 @@ public class DecorateDelegate extends BottomItemDelegate implements View.OnClick
                     .loader(getContext())
                     .build()
                     .postWithFiles();
+
+//            RestClient.builder()
+//                    // URL
+//                    .url("URL")
+//                    // 文件参数：文件key-文件路径
+//                    .file("file", image2Path)
+//                    // 字符串参数：键-值
+//                    .params("key","value")
+//                    // 成功后相关处理
+//                    .success(response -> {
+//                    })
+//                    // 失败后相关处理
+//                    .failure(() -> {
+//                    })
+//                    // 出错后相关处理
+//                    .error((code, msg) -> {
+//                    })
+//                    // 加载动画
+//                    .loader(getContext())
+//                    // 建造请求服务
+//                    .build()
+//                    //执行RESTful请求
+//                    .postWithFiles();
         }
     }
 
