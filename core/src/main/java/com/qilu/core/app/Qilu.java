@@ -25,5 +25,4 @@ public final class Qilu {
     public static Handler getHandler() {
         return getConfiguration(ConfigKeys.HANDLER);
     }
-
 }

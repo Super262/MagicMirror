@@ -15,6 +15,7 @@ public class Configurator {
     private static final Handler HANDLER = new Handler();
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
 
+    // 不让其他类创建本类的对象
     private Configurator(){
         QILU_CONFIGS.put(ConfigKeys.CONFIG_READY, false);
         QILU_CONFIGS.put(ConfigKeys.HANDLER, HANDLER);
@@ -51,10 +52,12 @@ public class Configurator {
         ICONS.add(descriptor);
         return this;
     }
+
     public final Configurator withApiHost(String host) {
         QILU_CONFIGS.put(ConfigKeys.API_HOST, host);
         return this;
     }
+
     public final Configurator withLoaderDelayed(long delayed) {
         QILU_CONFIGS.put(ConfigKeys.LOADER_DELAYED, delayed);
         return this;

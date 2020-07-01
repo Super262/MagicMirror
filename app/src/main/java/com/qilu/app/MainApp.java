@@ -12,7 +12,6 @@ import com.joanzapata.iconify.fonts.SimpleLineIconsModule;
 import com.joanzapata.iconify.fonts.TypiconsModule;
 import com.joanzapata.iconify.fonts.WeathericonsModule;
 import com.qilu.core.app.Qilu;
-import com.qilu.core.util.storage.QiluPreference;
 
 
 public class MainApp extends Application {

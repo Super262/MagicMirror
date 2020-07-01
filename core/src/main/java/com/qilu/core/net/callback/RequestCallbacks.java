@@ -1,6 +1,5 @@
 package com.qilu.core.net.callback;
 
-
 import android.os.Handler;
 
 import com.qilu.core.app.ConfigKeys;
