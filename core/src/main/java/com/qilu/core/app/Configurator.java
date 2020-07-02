@@ -11,6 +11,8 @@ import java.util.HashMap;
 
 public class Configurator {
 
+    // 单例-懒汉
+
     private static final HashMap<Object,Object> QILU_CONFIGS= new HashMap<>();
     private static final Handler HANDLER = new Handler();
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
