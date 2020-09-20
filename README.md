@@ -82,12 +82,12 @@ App上妆业务的特有功能。
 #### 在完成项目架构设计和模块分解后，我开始搭建项目基础框架。这包括开发一个全局配置器和集成字体图标库。
 
 在设计全局配置器（类Configurator）时，我依照“单例模式”下的“懒汉模式”，确保全局配置一致，并且不会为维持一致性造成过大的空间占用。我使用Java下的私有构造方法和私有内部类实现这一目标，如图 6 所示。
-![image](https://github.com/Super262/MagicMirror/blob/master/screenshots/6.png)
+![image](https://github.com/Super262/MagicMirror/blob/master/screenshots/6.1.png)
 ```
 图 6 私有构造方法和私有内部类
 ```
 我选择使用字体图标来代替传统的图像图标，这是因为字体图标基于SVG，在分辨率变化时图标不会失真。我集成了android-iconify，可以使用Font Awesome作为图标源。字体图标和文字可以同在一个文本框，如图 7 所示。
-![image](https://github.com/Super262/MagicMirror/blob/master/screenshots/6.1.png)
+![image](https://github.com/Super262/MagicMirror/blob/master/screenshots/6.png)
 ```
 图 7 字体图标和文字同在一个文本框
 ```
@@ -101,7 +101,7 @@ App上妆业务的特有功能。
 为了提高后续开发的效率，我设计并开发了一个高效易用的网络请求框架。开发者可以轻松地使用这个框架发送并处理RESTful 请求。框架本身会自动处理多线程和异步的相关问题。例如，开发者可以使用这个框架上传一个或多个文件，如图 9 所示。
 ![image](https://github.com/Super262/MagicMirror/blob/master/screenshots/8.png)
 ```
-图 9 开发者使用框架上传文件
+图 9 开发者使用框架上传文件的代码
 ```
 
 这个网络请求框架基于Retrofit2构建。框架设计遵循“建造者模式”，即将一个复杂的对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。框架为开发者提供了简洁、高效的函数调用接口，具有相当完善的回调（Interface）。框架本身的项目结构和回调接口如图 10 所示，callback包下是所有的回调。
